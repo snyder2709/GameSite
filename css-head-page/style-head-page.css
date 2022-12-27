@@ -1,0 +1,1021 @@
+* {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    z-index: -2;
+}
+
+
+.wrapper-wb {
+    width: 100vw;
+    height: 100%;
+    display: flex;
+    /* justify-content: center; */
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    z-index: -2;
+}
+
+/* фон страницы */
+.wrapper-background {
+    position: fixed;
+    display: flex;
+    justify-content: end;
+    align-items: flex-end;
+    width: 100vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background: linear-gradient(135deg, rgb(21, 21, 21) 68%, rgba(205, 171, 0, 0.745) 70%, rgb(8, 8, 8) 76%);
+}
+
+
+.scene-wrapper {
+    display: flex;
+    position: absolute;
+    bottom: -150px;
+    right: -60px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 70%;
+    height: 80%;
+    /* position: relative; */
+}
+
+.wrapper-scene-banner {
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 400px;
+    background-image: url(/logo/logo_transparent.png);
+    /* background-position: -100px -300px; */
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.triple-scene-poster {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.double-scene-poster {
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    gap: 20px;
+}
+
+.double-scene-poster:nth-of-type(1) {
+    align-self: end;
+}
+
+.double-scene-poster:nth-of-type(4) {
+    align-self: end;
+    margin-right: 100px;
+}
+
+.head-page-scene-poster {
+    width: 190px;
+    height: 105px;
+    box-shadow: 20px 0px 12px 0px black;
+    border-radius: 9px;
+    background-size: cover;
+    background-position: center;
+}
+
+
+/* какая то шляпа которая особа не нужна */
+
+:root {
+    --border-radius: 0.5rem;
+    --paragraph-border-tadius: 0px 20px 20px 0px;
+    --title-font-size: 36px;
+    --title-font-size-small: 24px;
+    --description-font-size: 19px;
+    --description-font-size-small: 17px;
+    --button-border-radius: 9px;
+    --general-padding: 40px 20px 20px 20px;
+    --title-paragraph-font-size: 19px;
+    /* общие стили проекта */
+    --bacground-faq: #3F5576;
+    --main-bg: #1011163c;
+    --card-bg: #2F3148;
+    --line: #587099;
+    --white: hsl(0, 0%, 100%);
+    --box-shadow: 0px 0px 40px 3px #587099,
+        0px 0px 6px 0px #2F3148;
+    --gradient-background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(173, 144, 0, 0.452) 90%);
+}
+
+/* шапка */
+.header-global {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 35px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    /* border: 1px solid red; */
+    background: #171a21;
+    z-index: 10;
+    transition: all 0.2s ease-in-out;
+
+}
+
+.hidden-header-global {
+    top: -100px;
+}
+
+.logo-header {
+    height: 96%;
+    width: 14%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-image: url(/logo/logo_transparent.png);
+    background-size: 140%;
+    background-repeat: no-repeat;
+    background-position: -10px -12px;
+    width: 60px;
+    height: 100%;
+
+}
+
+.basket-container {
+    display: inline-flex;
+    position: relative;
+    height: 96%;
+    width: 140px;
+    align-self: flex-end;
+    justify-content: flex-start;
+    background-color: transparent;
+}
+
+.shopping-basket {
+    width: 100%;
+    height: 100%;
+    background-image: url(/logo/shoping_basket.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.basket-container::after {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 1%;
+    left: 70%;
+    width: 16px;
+    height: 16px;
+    border: 1px solid;
+    font-size: 12px;
+    border-radius: 50%;
+    content: '1';
+}
+
+.header-authorize-container {
+    width: 240px;
+    /* min-width: 250px; */
+    height: 95%;
+    border: 1px solid;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    gap: 2px;
+    border: none;
+}
+
+
+.authorize-btn {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    background-color: #191919;
+    background-color: transparent;
+    border: none;
+}
+
+.text-authorize {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    left: 0;
+    height: 100%;
+    box-shadow: inset 0px 0px 2.4px 2.1px #191919;
+    background-color: #323232;
+}
+
+
+
+/* навигация по сайту */
+.global-navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 9px;
+    width: 65%;
+    height: 40px;
+    z-index: 2;
+    background-color: transparent;
+
+}
+.container-head-page > .global-navbar{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 120px;
+    background-color: #0d0e13;
+}
+
+.navbar-href {
+    display: flex;
+    justify-content: space-around;
+    width: 60%;
+    font-size: 22px;
+
+}
+.nav-popup{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+.popup-category{
+    top: 100%;
+    position: absolute;
+    width: 300%;
+    height: auto;
+    border: 2px solid green;
+}
+.nav-popup > .svg-down-arrow{
+    margin-top: 5px;
+    width: 12px;
+    height: 12px;
+    /* border: 1px solid; */
+    background: url(https://steambuy.com/_templates/img/svg/ico-down-button.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.navbar-href>a {
+    color: rgba(255, 255, 255, 0.754);
+}
+
+.navbar-href>a:hover {
+    color: white;
+}
+
+/* поиск */
+.global-nav-search {}
+
+/* основной контент */
+/* общий контент контейнер */
+.container-head-page {
+    margin-top: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: transparent;
+    width: 65%;
+    height: auto;
+    z-index: 1;
+}
+
+/* способы получения игры */
+.payment-menthod-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-self: center;
+    padding: 5px 9px;
+    width: 80%;
+    gap: 2px;
+    min-height: 120px;
+    height: 170px;
+    /* border: 2px solid yellow; */
+    background: #191919;
+}
+
+.payment-method {
+    /* border: 1px solid red; */
+    width: 33.3%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #182838;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.payment-method:hover {
+    transform: scale(0.985);
+}
+
+.method {
+    position: absolute;
+    bottom: -60%;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    background-color: #171a21d9;
+    transition: all 0.3s ease;
+}
+
+.method:hover {
+    bottom: -10%;
+    cursor: pointer;
+}
+
+.method:hover {}
+
+.payment-method:nth-of-type(1) {
+    background-image: url(https://testmatick.com/wp-content/uploads/2020/04/Logotip-Steam.jpg);
+    background-position-y: 60%;
+
+}
+
+.payment-method:nth-of-type(2) {
+    background-image: url(https://cdn.akamai.steamstatic.com/steam/clusters/sale_familysharing/568536ac/sharingicon_english.png?t=1378836405);
+    background-size: contain;
+}
+
+.payment-method:nth-of-type(3) {
+    background-image: url(/img-head-page/rent-img.jpg);
+}
+
+.method-title {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+.description-method {}
+
+.description-method-text {
+    text-align: center;
+}
+
+/* секция со слдайдером и остальным контентом */
+.main-wrapper-head-page {
+    display: flex;
+    padding-top: 50px;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: nowrap;
+    width: 100%;
+    height: 1500px;
+
+}
+
+
+/* слайдер */
+.slider-banner-title {
+    font-size: 35px;
+    align-self: flex-start;
+    padding-left: 35px;
+    margin-bottom: 10px;
+}
+
+.head-page-slider-banner {
+
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 500px;
+    font-size: 40px;
+    text-align: center;
+    padding: 0 10px;
+}
+
+
+.button-slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 38px;
+    height: 30%;
+    background: linear-gradient(90deg, rgb(25, 25, 25) 39%, rgba(173, 144, 0, 0.631) 100%, rgba(0, 0, 0, 1) 100%);
+    border: none;
+    cursor: pointer;
+}
+
+.button-slider:nth-child(1) {
+    background: linear-gradient(90deg, rgb(25, 25, 25) 0%, rgba(173, 144, 0, 0.631) 0%, rgb(25, 25, 25) 71%);
+    ;
+}
+
+.slider-next,
+.slider-prev {
+    background-color: transparent;
+    background-image: url(https://store.akamai.steamstatic.com/public/images/v6/arrows.png);
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: -62%;
+    width: 32px;
+    height: 100%;
+}
+
+.slider-prev {
+    background-position-x: 162%;
+}
+
+.slider {
+    /* width: 100%; */
+    width: 100%;
+    height: 100%;
+    margin: 20px auto;
+    overflow: hidden;
+}
+
+.slider-line {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    background: #171a21;
+    position: relative;
+    left: 0;
+    transition: all ease-in-out 0.4s;
+}
+
+.banner-slider {
+    position: relative;
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+.head-inset-banner {
+
+    clip-path: polygon(0 0, 84% 0%, 99% 50%, 84% 100%, 0 100%, 0% 50%);
+    width: 65%;
+    background: #1a1a1ad4;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: all 1s;
+    transform-origin: bottom;
+}
+
+.secondary-inset-banner {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 22% 50%);
+    position: absolute;
+    right: 0px;
+    background: #191919;
+    width: 44%;
+    height: 100%;
+
+}
+
+.top-secondary-inset,
+.bottom-secondary-inset {
+    position: relative;
+    height: 49%;
+    width: 100%;
+}
+
+.top-secondary-inset {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.bottom-secondary-inset {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.banner-fon {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(https://celes.club/uploads/posts/2022-05/1653292137_25-celes-club-p-temno-zolotoi-fon-krasivie-26.jpg);
+    filter: opacity(0.09);
+}
+
+.screenshot-banner {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(/faq-page/faq-img/Fortnite-Kratos-Transparent-PNG.png);
+}
+
+.bottom-secondary-inset>.screenshot-banner {
+    box-shadow: 4px 0px 5px 2px black;
+    width: 32%;
+    height: 38%;
+    z-index: 2;
+    border-radius: 4px;
+    transition: all 0.5s ease;
+}
+
+.bottom-secondary-inset>.screenshot-banner:hover {
+    box-shadow: 0px 0px 5px 2px rgb(74, 74, 74);
+    cursor: pointer;
+}
+
+.bottom-secondary-inset>.screenshot-banner:nth-child(3) {
+    margin-right: 20px;
+}
+
+.bottom-secondary-inset>.screenshot-banner:nth-child(5) {
+    margin-right: 20px;
+}
+
+.title-secondary-banner-text,
+.description-secondary-banner-text {
+    text-align: left;
+    font-size: 28px;
+    width: 80%;
+}
+
+.title-secondary-banner-text {
+    height: 15%;
+    margin-top: 20px;
+}
+
+.description-secondary-banner-text {
+    margin-right: 10px;
+    text-align: left;
+    height: 45%;
+    font-size: 15px;
+}
+
+/* кнопка покупки */
+.buy-container {
+    display: flex;
+    justify-self: end;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-end;
+    width: 100%;
+    height: 40px;
+    gap: 20px;
+    position: relative;
+}
+
+.price {
+    position: absolute;
+    right: 50%;
+    width: 30%;
+    height: 100%;
+    padding: 0 10px;
+    background: #002346;
+    font-size: 32px;
+    box-shadow: inset 30px 0px 20px -10px black;
+}
+
+.btn-buy-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    height: auto;
+}
+
+.buy-product {
+    align-self: flex-end;
+    width: 120px;
+    height: 100%;
+    background-color: green;
+    border: none;
+    transition: all 0.2s;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.slider-btn-buy {
+    box-shadow: -5px 0px 2px 0px black;
+}
+
+.slider-btn-buy:hover {
+    box-shadow: -9px 0px 2px 1px black;
+}
+
+
+/* форма регистрации  .................................................................*/
+
+/*Контейнер с формой*/
+.container-form {
+    max-width: 400px;
+    width: 100%;
+    border-radius: 10px;
+    background-color: #1b1d29;
+    overflow: hidden;
+    margin: auto;
+    cursor: default;
+    z-index: 2;
+}
+
+/*Стилизация блока с формой*/
+.container-form .forms {
+    display: flex;
+    align-items: center;
+    height: 550px;
+    width: 200%;
+    transition: height 0.2s ease;
+}
+
+/*Стилизация формы входа и регистрации*/
+.container-form .form {
+    width: 50%;
+    padding: 30px;
+    background-color: transparent;
+    transition: margin-left 0.18s ease;
+}
+
+/* .modal-close {
+    position: absolute;
+    top: 0;
+    right: 5px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    color: #5ef7ff;
+    width: 30px;
+    height: 30px;
+} */
+
+/*Форма входа уходит вместо нее становится форма регистрации*/
+.container-form .login {
+    margin-left: -50%;
+    opacity: 0;
+    transition: margin-left 0.18s ease, opacity 0.15s ease;
+}
+
+/*Увеличивается высота окнтейнера с формами когда идёт переход с входа на регистрацию*/
+.container-form .forms {
+    height: 540px;
+}
+
+/*Заголовок формы*/
+.form-title {
+    text-align: center;
+    font-size: 27px;
+    font-weight: 600;
+    color: #5ef7ff;
+}
+
+/*Блоки с полями ввода*/
+.form .input-field {
+    position: relative;
+    height: 35px;
+    width: 100%;
+    margin-top: 25px;
+}
+
+/*Стилизация полей ввода*/
+.input-field input {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+    padding: 0 35px;
+    border: none;
+    font-size: 16px;
+    color: #fff;
+    border-bottom: 2px solid #999;
+    transition-duration: .3s;
+}
+
+/*Анимация при фокусе и когда введены какие-то символы*/
+.input-field input:is(:focus, :valid) {
+    border-bottom-color: #5ef7ff;
+}
+
+/*Стилизация всех иконок в полях ввода*/
+.input-field i {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+    font-size: 23px;
+    transition-duration: .3s;
+}
+
+/*Анимация всех иконок в полях ввода*/
+.input-field input:is(:focus, :valid)~i {
+    color: #5ef7ff;
+}
+
+/*Расположение иконок которые расположены с краю слева в полях ввода*/
+.input-field i.icon {
+    left: 0;
+}
+
+/*Расположение и стилизация иконки глаза*/
+.input-field i.showHidePw {
+    right: 0;
+    cursor: pointer;
+    padding: 10px;
+}
+
+/*Стилизация обычного текста в формах*/
+.form .text {
+    color: #999;
+}
+
+/*Блок с ссылкой забыли пароль*/
+.forgot-password-block {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/*Стилизация ссылок в форме*/
+.form-link {
+    color: #5ef7ff;
+    transition-duration: .3s;
+}
+
+/*Анимаци ссылок в форме*/
+.form-link:hover {
+    color: #fff;
+}
+
+/*Стилизация кнопки открытия формы*/
+.open-form-button {
+    /* padding: 10px 32px;
+    margin-top: 10px;
+    margin-left: 10px;
+    background-color: #1b1d29;
+    box-shadow: 0 4px 6px rgb(0 0 0 / 28%);
+    border-radius: 4px;
+    border: 2px solid #adfcff;
+    font-size: 14px;
+    font-weight: 500;
+    color: #adfcff;
+    transition-duration: .3s */
+}
+
+/*Анимация кнопки открытия формы*/
+.open-form-button:hover {
+    border: 2px solid #fff;
+    color: #fff;
+}
+
+/*Стилизация кнопки входа и регистрации*/
+.form button.submit-btn {
+    width: 100%;
+    height: 45px;
+    background-color: #29cbd3;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #0d0e13;
+    margin-top: 20px;
+    transition-duration: .3s;
+}
+
+/*Анимация кнопки входа и регистрации*/
+.form button.submit-btn:hover {
+    background-color: #adfcff;
+    box-shadow: 0 8px 12px rgb(173 252 255 / 20%);
+}
+
+/*Стилизация кнопок для иного входа*/
+.another-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 45px;
+    background-color: transparent;
+    border: 1px solid #363c59;
+    border-radius: 8px;
+    font-size: 15px;
+    color: #a1a8ce;
+    transition-duration: .3s;
+}
+
+/*Анимация кнопок для иного входа*/
+.another-btn:hover {
+    background-color: #282d3f;
+    color: #fff;
+}
+
+/*Позиция и стилизация разделяющей линии "или"*/
+.line {
+    position: relative;
+    height: 1px;
+    width: 100%;
+    margin: 36px 0;
+    background-color: #999;
+}
+
+/*Стилизация блока-псевдокласса "или"*/
+.line::before {
+    content: "Или";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #1b1d29;
+    color: #5ef7ff;
+    padding: 0 15px;
+}
+
+/*Блок с кнопкой Steam*/
+.steam-btn-block {}
+
+/*Блок с кнопкой Google*/
+.google-btn-block {
+    margin-top: 10px;
+}
+
+/*Логотипы steam,google*/
+img.another-btn-logo {
+    height: 30px;
+    width: 30px;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+/*Расположение ссылки для перехода на форму регистрации или на форму входа*/
+.form .login-or-signup-block {
+    margin-top: 30px;
+    text-align: center;
+}
+
+/*Поле с input и с текстом ошибки*/
+form .field {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+/*Анимация к полям вода*/
+form .field.shake {
+    animation: shake 0.3s ease-in-out;
+}
+
+/*Анимация ошибки полей ввода*/
+@keyframes shake {
+
+    0%,
+    100% {
+        margin-left: 0px;
+    }
+
+    20%,
+    80% {
+        margin-left: -12px;
+    }
+
+    40%,
+    60% {
+        margin-left: 12px;
+    }
+}
+
+/*Поле с input*/
+form .field .input-area {
+    position: relative;
+    height: 35px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+/*Стилизация input*/
+form input {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+    padding: 0 35px;
+    border: none;
+    font-size: 16px;
+    color: #fff;
+    border-bottom: 2px solid #999;
+    transition-duration: .3s;
+}
+
+/*Анимация input при фокусе*/
+form .input-area input:focus {
+    border-bottom-color: #5ef7ff;
+}
+
+/*Ошибка: окрашивание рамок input в оранжевый цвет*/
+form .field.error input {
+    border-color: #ff7300;
+}
+
+/*Ошибка: окрашивание рамок input в оранжевый цвет*/
+form .field.valid input {
+    border-color: #adfcff;
+}
+
+/*Позиция и стилизация иконок в input*/
+.field .input-area i {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+    font-size: 23px;
+    transition-duration: .3s;
+}
+
+/*Анимация всех иконок в полях ввода*/
+.input-area input:focus~i.icon {
+    color: #5ef7ff;
+}
+
+/*Стилизация и позиция иконок: email и пароля*/
+.input-area .icon {
+    left: 5px;
+    bottom: -5px;
+    color: #bfbfbf;
+    transition: color 0.2s ease;
+}
+
+/*Стилизация иконки - глаза*/
+.input-area i.showHidePw {
+    right: 0;
+    cursor: pointer;
+    padding: 10px;
+}
+
+/*Анимация иконки - глаза*/
+.input-area i.showHidePw:hover {
+    color: #5ef7ff;
+}
+
+/*Стилизация иконки - ошибка*/
+.input-area i.error-icon {
+    top: 5px;
+    right: -5px;
+    font-size: 14px;
+    color: #ff7300;
+
+}
+
+/*Стилизация иконки - галочка*/
+.input-area i.valid-icon {
+    top: 5px;
+    right: -10px;
+    font-size: 20px;
+    color: #adfcff;
+}
+
+/*Стилизация текста "ошибки"*/
+form .field .error-txt {
+    color: #ffa600;
+    text-align: left;
+    margin-top: 5px;
+}
+
+/*Ошибка не видна по умолчанию*/
+form .field .error {
+    display: none;
+}
+
+/*Ошибка не видна по умолчанию*/
+form .field .valid {
+    display: none;
+}
+
+/*Ошибка видна*/
+form .field.shake .error,
+form .field.error .error {
+    display: block;
+}
+
+form .field.valid .valid {
+    display: block;
+}

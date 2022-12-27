@@ -1,0 +1,85 @@
+.list-game {
+    margin-top: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-direction:column;
+    flex-wrap: nowrap;
+    height:auto;
+    width: 100%;
+    border: 1px solid red;
+}
+.slider-game-list{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.list-game-card{
+    display: none;
+    width: 100%;
+    gap: 20px;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.active-card{
+    display: flex;
+} 
+.card-game {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    
+    width: 23%;
+    height: 280px;
+    border: 1px solid green;
+}
+.img-game-card {
+    width: 100%;
+    height: 80%;
+    background-image: url(/logo/linkedin_banner_image_2.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.descriptiion-game-card {
+    background-color:#002346 ;
+    width: 100%;
+    height: 20%;
+}
+.game-name-card {
+}
+.game-publisher-card {
+}
+.game-year-card {
+}
+
+
+
+.nav-game-list {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    font-size: 30px;
+    cursor: pointer;
+    
+
+}
+.nav-game-href {
+    position: relative;
+}
+.nav-game-href-active{
+
+}
+.nav-game-href-active::after{
+    content: "";
+    width: 100%;
+    bottom: -10px;
+    right: 0px;
+    position:absolute;
+    background-color: aqua;
+    height: 10px;
+}
